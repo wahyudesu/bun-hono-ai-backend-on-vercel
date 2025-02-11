@@ -8,7 +8,7 @@ import { zValidator } from '@hono/zod-validator'
 import { generateObject } from 'ai'
 import { createGroq } from '@ai-sdk/groq'
 
-const app = new Hono()
+const app = new Hono().basePath('/api')
 
 app.use(logger())
 app.use(cors())
